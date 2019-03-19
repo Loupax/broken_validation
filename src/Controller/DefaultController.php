@@ -18,12 +18,12 @@ class DefaultController{
     /**
      * @Route("/")
      */
-    public function __invoke(Request $request, FormFactoryInterface $formFactory, ValidatorInterface $validator)
+    public function __invoke(FormFactoryInterface $formFactory, ValidatorInterface $validator)
     {
         $data = new MyForm();
 
         $form = $formFactory->create(MyFormType::class, $data);
-        $form->handleRequest($request);
+
         $violations = $validator->validate($form);
         return new Response($violations->get(0));
     }
