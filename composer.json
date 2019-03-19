@@ -13,7 +13,7 @@
         "symfony/flex": "^1.0",
         "symfony/form": "4.2.3",
         "symfony/framework-bundle": "^4.1",
-        "symfony/validator": "4.2.3",
+        "symfony/validator": "^4.2",
         "symfony/yaml": "^4.1"
     },
     "config": {
